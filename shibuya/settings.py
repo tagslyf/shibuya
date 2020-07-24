@@ -50,7 +50,7 @@ START_APPS = [
     'appointment',
 ]
 
-INSTALLED_APPS += INSTALLED_APPS
+INSTALLED_APPS += START_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
