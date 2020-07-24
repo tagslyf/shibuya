@@ -46,6 +46,12 @@ THIRD_PARTY_APPS = [
 
 INSTALLED_APPS += THIRD_PARTY_APPS
 
+START_APPS = [
+    'appointment',
+]
+
+INSTALLED_APPS += INSTALLED_APPS
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
