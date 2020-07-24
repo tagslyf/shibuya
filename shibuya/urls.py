@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from rest_framework import routers
+from rest_framework.authtoken.views import obtain_auth_token
 
 from .views import GroupViewSet, HelloView, UserViewSet
 
@@ -26,4 +27,8 @@ router.register(r'groups', GroupViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    path('', include(router.urls)),
+    path('hello/', HelloView.as_view(), name='hello'),
+    path('authentication/v1/', obtain_auth_token, name='token-auth'),
 ]
